@@ -67,3 +67,70 @@
         </tr>
     </table>
 </div>
+<div class="card">
+    <h1>Pipe decimal</h1>
+    <table>
+        <tr>
+            <th>Pipe</th>
+            <th>Valor sin pipe</th>
+            <th>Valor con pipe</th>
+            <th>Opciones del pipe</th>
+        </tr>
+        <tr>
+            <td>decimal</td>
+            <td>{{importe}}</td>
+            <td>{{importe | number: "5.2-2"}}</td>
+            <td>nº mínimo enteros.nº máximo decimales-nº mínimo decimales</td>
+        </tr>
+        <tr>
+            <td>decimal</td>
+            <td>{{importe}}</td>
+            <td>{{importe | number: ".4-4"}}</td>
+            <td>.nº máximo decimales-nº mínimo decimales</td>
+        </tr>
+    </table>
+</div>
+<div class="card">
+    <h1>Pipe currency</h1>
+    <table>
+        <tr>
+            <th>Pipe</th>
+            <th>Valor sin pipe</th>
+            <th>Valor con pipe</th>
+            <th>Opciones del pipe</th>
+        </tr>
+        <tr>
+            <td>currency</td>
+            <td>{{importe}}</td>
+            <td>{{importe | currency: divisa}}</td>
+            <td>String de moneda</td>
+        </tr>
+        <!-- <tr>
+            <td>currency</td>
+            <td>{{importe}}</td>
+            <td>{{importe | number: '.2-2' | currency: divisa}}</td>
+            <td>Los pipe se pueden encadenar</td>
+        </tr> -->
+    </table>
+</div>
+<div class="card">
+    <h1>Pipe propio Número</h1>
+    <table>
+        <tr>
+            <th>Pipe</th>
+            <th>Valor sin pipe</th>
+            <th>Valor con pipe</th>
+            <th>Opciones del pipe</th>
+        </tr>
+        <tr>
+            <td>numero</td>
+            <td>{{importe}}</td>
+            <td>{{importe | numero: numeroDecimales: '€'}}</td>
+            <td>
+                <button (click)="setNumeroDecimales(1)">+</button>
+                <button (click)="setNumeroDecimales(-1)">-</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
